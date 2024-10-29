@@ -4,7 +4,7 @@ import (
 	"testing"
 )
 
-func Test_GenerateToken03(t *testing.T) {
+func Test_GenerateToken04(t *testing.T) {
 	var appId uint32 = 1
 	userId := "demo"
 	serverSecret := "fa94dd0f974cf2e293728a526b028271"
