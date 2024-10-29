@@ -5,11 +5,18 @@ import (
 	"io"
 )
 
+func UnpackUint8(r io.Reader) (uint8, error) {
+	var n uint8
+	err := binary.Read(r, binary.BigEndian, &n)
+	return n, err
+}
+
 func UnPackUint16(r io.Reader) (uint16, error) {
 	var n uint16
 	err := binary.Read(r, binary.BigEndian, &n)
 	return n, err
 }
+
 func UnPackint64(r io.Reader) (int64, error) {
 	var n int64
 	err := binary.Read(r, binary.BigEndian, &n)

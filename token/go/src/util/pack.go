@@ -13,6 +13,10 @@ func UnPackData(r io.Reader, data interface{}) error {
 	return binary.Read(r, binary.BigEndian, data)
 }
 
+func PackUint8(w io.Writer, n uint8) error {
+	return binary.Write(w, binary.BigEndian, n)
+}
+
 func PackUint16(w io.Writer, n uint16) error {
 	return binary.Write(w, binary.BigEndian, n)
 }
